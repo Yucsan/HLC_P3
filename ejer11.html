@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 11</title>
+</head>
+<body>
+    <h2>Lista Compra</h2>  
+    <ul id="lista">
+        
+    </ul>
+    <button id="agrega">Añadir</button>
+</body>
+
+    <script>
+
+        var productos=["leche","huevos","pan","sardinas","aceite"];
+        var cont=0;
+        var agrega = document.querySelector("#agrega");
+        agrega.addEventListener("click", function(){
+            if(cont<productos.length){
+                var pro = document.createElement("li");
+                pro.innerHTML=productos[cont];
+                cont++;
+                document.querySelector("#lista").appendChild(pro);
+            }else{
+                alert("ya esta llena la bolsa mamon");
+            }
+        });
+
+    </script>
+</html>
