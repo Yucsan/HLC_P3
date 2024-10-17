@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="demo"></div>
+<body>
+    <img src="imagenes14/calabacin.png" alt="">
+    <script>
+        const productos = [{ id: 1, nombre: 'Patata', precio: 1, imagen: 'patata'},
+                           { id: 2, nombre: 'Cebolla', precio: 1.2, imagen: 'cebolla' },
+                           { id: 3, nombre: 'Calabacin', precio: 2.1, imagen: 'calabacin' },
+                           { id: 4, nombre: 'Fresas', precio: 0.6, imagen: 'fresas' }];
+         
+        for(i=0; i<productos.length; i++){
+            document.querySelector("#demo").innerHTML+=productos[i].id+" "+productos[i].nombre+" "+productos[i].precio;
+            const para = document.createElement("img");
+            para.src = "imagenes14/"+productos[i].imagen+".png";
+            document.querySelector("#demo").appendChild(para);
+            document.querySelector("#demo").innerHTML+="</br>";
+            
+        }
+
+    
+                           
+        /*
+        productos.forEach(muestra);
+        function muestra(){
+
+            document.querySelector("#demo").innerHTML=productos.id;
+        }*/
+        
+
+    </script>
+</body>
+
+</html>
