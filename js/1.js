@@ -11,7 +11,7 @@ console.log(cadenaSinEsp);
 
 //
 var cambioVocales=cadenaSinEsp.replaceAll("a","ú");
-console.log(cambioVocales);
+console.log("remplazo vocales a => ú: "+cambioVocales);
 
 var palabras = cadena.split(" ");
 console.log(palabras);

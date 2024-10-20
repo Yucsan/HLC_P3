@@ -1,74 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=script, initial-scale=1.0">
-    <title>Ejer 12</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ejercicio 12</title>
 </head>
-<style>
-    ul li button{ margin: 0 3px 1px;}
-    li{ margin: 0 2px;}
-</style>
+
 <body>
+    <!--
+    12. Basándonos en el ejercicio anterior, añadiremos cada vez que se crea un nuevo producto, dos botones junto a este.
+        - Botón SÍ (significa comprado): cuando se clique sobre él, el nombre del producto será marcado verde y en cursiva.
+        - Botón NO (significa no comprado): cuando se clique sobre él, el nombre del producto será marcado como rojo y en negrita.
+    -->
+    <h1>Ejercicio 12</h1>  
     <h2>Lista Compra</h2>  
     <ul id="lista">
         
     </ul>
     <button id="agrega">Añadir</button>
-    <script>
-        /*
-        12. Basándonos en el ejercicio anterior, añadiremos cada vez que se crea un nuevo producto, dos botones junto a este.
-            - Botón SÍ (significa comprado): cuando se clique sobre él, el nombre del producto será marcado verde y en cursiva.
-            - Botón NO (significa no comprado): cuando se clique sobre él, el nombre del producto será marcado como rojo y en negrita.
-        */
-        var productos=["leche","huevos","pan","sardinas","aceite"];
-        var opc=["si","no"];
-        var cont=0;
-        var agrega = document.querySelector("#agrega");
-        agrega.addEventListener("click", function(){
-            if(cont<productos.length){
-                
-                //creo producto
-                var pro = document.createElement("li");
-                pro.innerHTML=productos[cont];//texto producto
-                pro.setAttribute("id", productos[cont]+"prod");//asigno id
 
-                //botones si y no producto
-                var btn1 = document.createElement("button");
-                var btn2 = document.createElement("button");
-                btn1.innerHTML=opc[0];
-                btn2.innerHTML=opc[1];
-                //asigno ids botones si no producto
-                var idAux=productos[cont]+"**";
-                btn1.setAttribute("id", idAux+'si');
-                btn2.setAttribute("id", idAux+'no');
-                
-                // Asignar funciones a los botones
-                btn1.addEventListener("click", function() {
-                    si(pro.id); 
-                });
-                btn2.addEventListener("click", function() {
-                    no(pro.id); 
-                });
+    <script type="text/javascript" src="js/12.js"></script>
+       
 
-                var idBtns= "#"+productos[cont]+"prod";//rescato el id del padre para colocar los botones
-                cont++;
-                document.querySelector("#lista").appendChild(pro);
-                document.querySelector(idBtns).appendChild(btn1);
-                document.querySelector(idBtns).appendChild(btn2);
-                
-                //console.log(btn1.parentNode.id);
-                
-
-            }else{
-                alert("ya esta llena la bolsa mamon");
-            }
-        });
-
-        //funciones si no
-        var si = (producto) => document.querySelector("#"+producto).style.color="seagreen";
-        var no = (producto) => document.querySelector("#"+producto).style.color="tomato";
-
-    </script>
 </body>
 </html>

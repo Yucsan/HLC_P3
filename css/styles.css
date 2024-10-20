@@ -1,0 +1,40 @@
+/* CSS */
+
+#enlacesEj4 li{
+    cursor: pointer;
+}
+#enlacesEj4 li:hover{
+    color:blueviolet;
+}
+/*ejer 9*/
+#mostrar {
+    cursor: pointer;
+}
+
+/*ejer 10*/
+#mas, #menos{
+    cursor: pointer;
+}
+#menos:hover{
+    color:blueviolet;
+}
+#mas:hover{
+    color:rgb(221, 15, 149);
+}
+
+/*ejer 12*/
+ul li button {
+    margin: 0 3px 1px;
+}
+
+li {
+    margin: 0 2px;
+}
+
+/*ejer13-14*/
+img{
+    width: 200px;
+}
+span{
+    color:tomato;
+}

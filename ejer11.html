@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 11</title>
+    <title>Ejercicio 11</title>
 </head>
 <body>
+    <!-- 
+    11. Simulamos una lista de la compra. Tenemos un HTML con un título (Lista de la compra) y
+    una lista de productos, que estará vacía. Tendremos un botón de añadir con un onclick que al
+    clicarlo preguntará al usuario por el producto a añadir (haciendo uso de prompt), tras indicarlo
+    se añadirá a la lista (añadiendo el nodo correspondiente al elemento lista).
+    -->
+    <h1>Ejercicio 11</h1>
     <h2>Lista Compra</h2>  
     <ul id="lista">
-        
     </ul>
     <button id="agrega">Añadir</button>
 </body>
 
-    <script>
-
-        var productos=["leche","huevos","pan","sardinas","aceite"];
-        var cont=0;
-        var agrega = document.querySelector("#agrega");
-        agrega.addEventListener("click", function(){
-            if(cont<productos.length){
-                var pro = document.createElement("li");
-                pro.innerHTML=productos[cont];
-                cont++;
-                document.querySelector("#lista").appendChild(pro);
-            }else{
-                alert("ya esta llena la bolsa mamon");
-            }
-        });
-
-    </script>
+    <script type="text/javaScript" src="js/11.js"></script>
 </html>

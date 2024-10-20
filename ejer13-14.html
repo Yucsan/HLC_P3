@@ -1,40 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ejercicio 13-14 Fernando Chang</title>
 </head>
-<div id="demo"></div>
+
 <body>
-    <img src="imagenes14/calabacin.png" alt="">
-    <script>
-        const productos = [{ id: 1, nombre: 'Patata', precio: 1, imagen: 'patata'},
-                           { id: 2, nombre: 'Cebolla', precio: 1.2, imagen: 'cebolla' },
-                           { id: 3, nombre: 'Calabacin', precio: 2.1, imagen: 'calabacin' },
-                           { id: 4, nombre: 'Fresas', precio: 0.6, imagen: 'fresas' }];
-         
-        for(i=0; i<productos.length; i++){
-            document.querySelector("#demo").innerHTML+=productos[i].id+" "+productos[i].nombre+" "+productos[i].precio;
-            const para = document.createElement("img");
-            para.src = "imagenes14/"+productos[i].imagen+".png";
-            document.querySelector("#demo").appendChild(para);
-            document.querySelector("#demo").innerHTML+="</br>";
-            
-        }
 
+    <!-- 13. Dado el siguiente array de objetos: -->
+    <!-- 14. Recorre el array y representa en el HTML cada producto con su precio y una imagen.
+        Para añadir la imagen deberás descargar una imagen para cada producto y guardarla en una
+        carpeta img con el nombre de cada uno de ellos. Deberá añadir el atributo src para cada una de
+        las imágenes de forma dinámica.
+        Basándonos en el ejercicio anterior, añadiremos un botón Disponible para cada uno de los
+        productos de nuestro array con una clase disabled (color gris). Al clicar sobre este, se cambiará
+        la clase a enabled (color verde), si se vuelve a clicar comprobará su estado y lo cambiará al
+        contrario.  -->
+    <h1>Ejercicio 13 - 14</h1>
     
-                           
-        /*
-        productos.forEach(muestra);
-        function muestra(){
-
-            document.querySelector("#demo").innerHTML=productos.id;
-        }*/
-        
-
-    </script>
+    <div id="contenedor"></div>    
+    <!-- <img src="imagenes14/calabacin.png" alt=""> -->
+    <script type="text/javascript" src="js/1314.js"></script>
+    
 </body>
 
 </html>

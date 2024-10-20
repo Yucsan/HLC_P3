@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 9</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ejercicio 9</title>
 </head>
 
 <body>
@@ -59,46 +60,9 @@
         lenguajes de programación son lenguajes de scripts.
     </p>
 
-    <style>
-        #mostrar {
-            cursor: pointer;
-        }
-    </style>
-    <script>
-        /*
-        Crea un HTML con tres párrafos cogiendo la información del siguiente enlace
-        Añade también una etiqueta span con un onclick. Este llamará una función llamada mostrar.
-        Al cargar el HTML solo se mostrará el primer párrafo, los otros dos estarán ocultos. Si se
-        clica sobre el span “Mostrar más…” este mostrará los otros dos párrafos y cambiará el valor
-        del span a “Mostrar menos…”. Si clica sobre “Mostrar menos…” ocultará los dos párrafos y
-        volverá a cambiar el nombre del span.
-        */
-        for (i = 1; i < 3; i++)
-            document.querySelectorAll("p")[i].style.display = "none";
-
-        var mostrar = document.querySelector("#mostrar");
-        mostrar.style.color = "seagreen";
-
-        var control = false;//variable de control
-        mostrar.addEventListener("click", function () {
-            if (!control) {
-                for (i = 1; i < 3; i++) {
-                    document.querySelectorAll("p")[i].style.display = "block";
-                }
-                mostrar.innerHTML = "MOSTRAR MENOS"
-                mostrar.style.color = "tomato";
-                control = true;
-            } else {
-                for (i = 1; i < 3; i++) {
-                    document.querySelectorAll("p")[i].style.display = "none";
-                }
-                mostrar.innerHTML = "MOSTRAR MAS"
-                mostrar.style.color = "seagreen";
-                control = false;
-            }
-
-        });
-    </script>
+    <script type="text/javascript" src="js/9.js"></script>
+       
+    
 
 </body>
 
